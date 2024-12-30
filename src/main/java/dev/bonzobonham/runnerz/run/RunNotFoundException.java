@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class RunNotFoundException  extends RuntimeException {
-    public RunNotFoundException(String id) {
+    public RunNotFoundException(Integer id) {
         super("Run not found with id: " + id);
     }
     

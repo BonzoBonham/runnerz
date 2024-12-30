@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Positive;
 
 //Record: Class with data and accesors, inmutable, equals, hashcode, toString, all args constructor
 public record Run(
-    String id,
+    Integer id,
     @NotEmpty
     String title,
     LocalDateTime startedOn,

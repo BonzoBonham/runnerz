@@ -32,7 +32,7 @@ public class RunController {
     }
 
     @GetMapping("/{id}")
-    Run getRunById(@PathVariable String id) {
+    Run getRunById(@PathVariable Integer id) {
 
         Optional<Run> run = runRepository.findById(id);
 
@@ -45,18 +45,18 @@ public class RunController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     void create(@Valid @RequestBody Run run){
-        runRepository.createRun(run);
+        runRepository.create(run);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    void update(@Valid @RequestBody Run run, @PathVariable String id){
+    void update(@Valid@RequestBody Run run, @PathVariable Integer id){
         runRepository.update(run, id);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
-    void delete(@PathVariable String id){
+    void delete(@PathVariable Integer id){
         runRepository.delete(id);
     }
 }

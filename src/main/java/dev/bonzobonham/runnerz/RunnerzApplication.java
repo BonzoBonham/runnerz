@@ -12,10 +12,7 @@ public class RunnerzApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RunnerzApplication.class, args);
-		
-		log.info("Hello Spring Boot!");
 	}
-
 	//Bean: Instance of a class with specific metadata, handled by Spring
 
 }
